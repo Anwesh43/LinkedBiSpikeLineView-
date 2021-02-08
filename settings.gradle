@@ -1,0 +1,3 @@
+include ':bispikelineview'
+include ':app'
+rootProject.name = "LinkedBiSpikeLineView"
