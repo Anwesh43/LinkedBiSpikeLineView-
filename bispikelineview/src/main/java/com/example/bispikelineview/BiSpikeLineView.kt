@@ -20,7 +20,7 @@ val colors : Array<Int> = arrayOf(
 val strokeFactor : Float = 90f
 val sizeFactor : Float= 4.9f
 val delay : Long = 20
-val parts : Int = 3
+val parts : Int = 4
 val scGap : Float = 0.02f / parts
 val backColor : Int = Color.parseColor("#BDBDBD")
 
@@ -35,8 +35,10 @@ fun Canvas.drawBiSpikeLine(scale : Float, w : Float, h : Float, paint : Paint) {
     val sf1 : Float = sf.divideScale(0, parts)
     val sf2 : Float = sf.divideScale(1, parts)
     val sf3 : Float = sf.divideScale(2, parts)
+    val sf4 : Float = sf.divideScale(3, parts)
     save()
     translate(w / 2, h / 2)
+    rotate(-90f * sf4)
     for (j in 0..1) {
         save()
         scale(1f, 1f - 2 * j)
